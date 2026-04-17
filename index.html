@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Asia Unlocked — Your Insider Guide to Southeast Asia</title>
-  <meta name="description" content="Insider guides to Bangkok, Colombo, Kuala Lumpur and beyond. Hotels, food, expat life, relocation tips. Get the free Bangkok Relocation Checklist."/>
+  <title>The Thailand Relocation Guide — Asia Unlocked</title>
+  <meta name="description" content="The Thailand Relocation Guide — real numbers, insider voice, no fluff. 10 cities scored and ranked. Visas, cost of living, banking and your 30-day move plan."/>
   <meta name="theme-color" content="#0d1b2a"/>
   <meta name="agd-partner-manual-verification" />
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
@@ -18,157 +18,309 @@
       --cream: #f5efe0;
       --red-ink: #8b2e0a;
       --text: #2a2a2a;
-      --muted: #888;
     }
-
+ 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
     html { scroll-behavior: smooth; }
-
+ 
     body {
       font-family: 'Lato', sans-serif;
       background: var(--dark);
       color: var(--cream);
       overflow-x: hidden;
     }
-
-    /* ─── HERO ─────────────────────────────────────── */
-    .hero {
-      min-height: 100vh;
-      position: relative;
+ 
+    /* ─── NAV ───────────────────────────────────────── */
+    nav {
+      padding: 20px 40px;
       display: flex;
-      flex-direction: column;
       align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 60px 24px 80px;
-      overflow: hidden;
+      justify-content: space-between;
+      border-bottom: 1px solid rgba(201,168,76,0.15);
+      background: #070e18;
     }
-
-    .hero-bg {
-      position: absolute; inset: 0;
-      background:
-        radial-gradient(ellipse at 20% 50%, rgba(201,168,76,0.08) 0%, transparent 60%),
-        radial-gradient(ellipse at 80% 20%, rgba(26,58,92,0.6) 0%, transparent 50%),
-        linear-gradient(160deg, #0d1b2a 0%, #1a3a5c 50%, #0d1b2a 100%);
-      z-index: 0;
-    }
-
-    /* Animated stars */
-    .stars {
-      position: absolute; inset: 0; z-index: 0;
-      overflow: hidden;
-    }
-    .star {
-      position: absolute;
-      background: white;
-      border-radius: 50%;
-      animation: twinkle var(--dur, 3s) ease-in-out infinite;
-      animation-delay: var(--delay, 0s);
-    }
-    @keyframes twinkle {
-      0%, 100% { opacity: 0.2; transform: scale(1); }
-      50% { opacity: 0.9; transform: scale(1.3); }
-    }
-
-    /* Horizontal gold line decorations */
-    .hero::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 3px;
-      background: linear-gradient(90deg, transparent, var(--gold), transparent);
-      z-index: 2;
-    }
-
-    .hero-content { position: relative; z-index: 2; max-width: 780px; }
-
-
-
-    h1 {
+ 
+    .nav-logo {
       font-family: 'Playfair Display', serif;
-      font-size: clamp(48px, 8vw, 92px);
-      font-weight: 900;
-      line-height: 1;
-      letter-spacing: -1px;
-      color: var(--cream);
-      animation: fadeUp 0.8s ease 0.1s both;
-    }
-
-    h1 span { color: var(--gold); }
-
-    .hero-divider {
-      width: 120px; height: 2px;
-      background: linear-gradient(90deg, transparent, var(--gold), transparent);
-      margin: 24px auto;
-      animation: fadeUp 0.8s ease 0.2s both;
-    }
-
-    .hero-tagline {
-      font-size: clamp(14px, 2.5vw, 18px);
-      font-weight: 300;
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--gold);
       letter-spacing: 4px;
       text-transform: uppercase;
-      color: var(--gold-light);
-      margin-bottom: 16px;
-      animation: fadeUp 0.8s ease 0.3s both;
+      text-decoration: none;
     }
-
-    .hero-sub {
-      font-size: clamp(15px, 2vw, 18px);
-      color: rgba(245,239,224,0.7);
-      line-height: 1.7;
-      max-width: 560px;
-      margin: 0 auto 48px;
-      animation: fadeUp 0.8s ease 0.4s both;
-    }
-
-    .cta-btn {
+ 
+    .nav-cta {
       display: inline-block;
       background: var(--gold);
       color: var(--dark);
       font-family: 'Lato', sans-serif;
       font-weight: 700;
-      font-size: 14px;
-      letter-spacing: 3px;
+      font-size: 12px;
+      letter-spacing: 2px;
       text-transform: uppercase;
       text-decoration: none;
-      padding: 16px 40px;
+      padding: 10px 24px;
+      border-radius: 2px;
+      transition: background 0.2s ease;
+    }
+ 
+    .nav-cta:hover { background: var(--gold-light); }
+ 
+    /* ─── GUIDE SECTION ─────────────────────────────── */
+    .guide-section {
+      background: linear-gradient(160deg, #0d1b2a 0%, #1a2f4a 100%);
+      padding: 80px 24px 100px;
+      position: relative;
+    }
+ 
+    .guide-section::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    }
+ 
+    .guide-inner {
+      max-width: 860px;
+      margin: 0 auto;
+    }
+ 
+    /* Hero card */
+    .guide-hero-card {
+      background: #111e2e;
+      border: 1px solid rgba(201,168,76,0.2);
+      border-radius: 4px;
+      padding: 56px 48px;
+      margin-bottom: 24px;
+      position: relative;
+    }
+ 
+    .guide-hero-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: var(--gold);
+      border-radius: 4px 4px 0 0;
+    }
+ 
+    .guide-eyebrow {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      color: var(--gold);
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+ 
+    .guide-headline {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.2rem, 5vw, 3.6rem);
+      font-weight: 900;
+      color: var(--cream);
+      line-height: 1.1;
+      margin-bottom: 10px;
+    }
+ 
+    .guide-product-name {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      color: rgba(245,239,224,0.35);
+      text-transform: uppercase;
+      margin-bottom: 24px;
+    }
+ 
+    .guide-subheadline {
+      font-size: 18px;
+      color: rgba(245,239,224,0.72);
+      line-height: 1.65;
+      max-width: 560px;
+      margin-bottom: 36px;
+    }
+ 
+    .guide-checklist { margin-bottom: 32px; }
+ 
+    .guide-check-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 15px;
+      color: rgba(245,239,224,0.78);
+      margin-bottom: 11px;
+      line-height: 1.5;
+    }
+ 
+    .guide-check-mark {
+      color: var(--gold);
+      font-weight: 700;
+      flex-shrink: 0;
+      font-size: 15px;
+    }
+ 
+    .guide-clarity {
+      border-left: 3px solid var(--gold);
+      padding-left: 20px;
+      font-size: 16px;
+      color: var(--cream);
+      font-style: italic;
+      line-height: 1.65;
+      margin-bottom: 40px;
+      max-width: 520px;
+    }
+ 
+    .guide-cta-block {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+    }
+ 
+    .guide-btn {
+      display: inline-block;
+      background: var(--gold);
+      color: var(--dark);
+      font-family: 'Lato', sans-serif;
+      font-weight: 700;
+      font-size: 15px;
+      letter-spacing: 0.5px;
+      text-decoration: none;
+      padding: 18px 36px;
       border-radius: 2px;
       transition: all 0.3s ease;
-      animation: fadeUp 0.8s ease 0.5s both;
-      cursor: pointer;
-      border: none;
     }
-    .cta-btn:hover {
+ 
+    .guide-btn:hover {
       background: var(--gold-light);
       transform: translateY(-2px);
       box-shadow: 0 8px 30px rgba(201,168,76,0.3);
     }
-
-    .scroll-hint {
-      position: absolute;
-      bottom: 32px; left: 50%;
-      transform: translateX(-50%);
-      z-index: 2;
-      color: rgba(245,239,224,0.4);
+ 
+    .guide-urgency {
       font-size: 12px;
-      letter-spacing: 3px;
+      color: rgba(245,239,224,0.3);
+      letter-spacing: 0.3px;
+    }
+ 
+    /* Bottom grid */
+    .guide-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+ 
+    @media (max-width: 640px) {
+      .guide-grid { grid-template-columns: 1fr; }
+      .guide-hero-card { padding: 36px 24px; }
+      nav { padding: 16px 20px; }
+      .nav-logo { font-size: 15px; letter-spacing: 2px; }
+    }
+ 
+    .guide-card {
+      background: #111e2e;
+      border: 1px solid rgba(201,168,76,0.15);
+      border-radius: 4px;
+      padding: 28px;
+    }
+ 
+    .guide-card-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      color: var(--gold);
       text-transform: uppercase;
-      animation: bounce 2s ease-in-out infinite;
+      margin-bottom: 12px;
     }
-    @keyframes bounce {
-      0%, 100% { transform: translateX(-50%) translateY(0); }
-      50% { transform: translateX(-50%) translateY(6px); }
+ 
+    .guide-card-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      color: var(--cream);
+      margin-bottom: 10px;
+      line-height: 1.3;
     }
-
-    /* ─── PILLARS ───────────────────────────────────── */
-    .pillars {
+ 
+    .guide-card-body {
+      font-size: 13px;
+      color: rgba(245,239,224,0.5);
+      line-height: 1.65;
+    }
+ 
+    .tier-row {
+      display: flex;
+      gap: 8px;
+      margin-top: 16px;
+    }
+ 
+    .tier-badge {
+      flex: 1;
+      border-radius: 2px;
+      padding: 10px 8px;
+      text-align: center;
+      border: 1px solid rgba(201,168,76,0.12);
+      background: rgba(255,255,255,0.02);
+    }
+ 
+    .tier-badge-label {
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+ 
+    .tier-badge-name {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--cream);
+    }
+ 
+    .tier-badge-cities {
+      font-size: 10px;
+      color: rgba(245,239,224,0.35);
+      margin-top: 3px;
+    }
+ 
+    .contents-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+ 
+    .contents-list li {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      padding: 9px 0;
+      border-bottom: 1px solid rgba(201,168,76,0.08);
+      font-size: 13px;
+      color: rgba(245,239,224,0.65);
+    }
+ 
+    .contents-list li:last-child { border-bottom: none; }
+ 
+    .contents-num {
+      font-size: 11px;
+      color: var(--gold);
+      font-weight: 700;
+      min-width: 20px;
+      flex-shrink: 0;
+    }
+ 
+    /* ─── ABOUT ─────────────────────────────────────── */
+    .about {
       background: var(--cream);
-      color: var(--text);
       padding: 80px 24px;
     }
-
+ 
+    .about-inner {
+      max-width: 700px;
+      margin: 0 auto;
+      text-align: center;
+    }
+ 
     .section-label {
       text-align: center;
       font-size: 11px;
@@ -177,145 +329,25 @@
       color: var(--red-ink);
       margin-bottom: 12px;
     }
-
+ 
     .section-title {
       font-family: 'Playfair Display', serif;
       font-size: clamp(28px, 4vw, 42px);
       font-weight: 700;
       text-align: center;
       color: var(--dark);
-      margin-bottom: 48px;
+      margin-bottom: 24px;
     }
-
-    .pillars-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 2px;
-      max-width: 1000px;
-      margin: 0 auto;
-    }
-
-    .pillar {
-      background: var(--dark);
-      color: var(--cream);
-      padding: 40px 28px;
-      text-align: center;
-      transition: background 0.3s;
-      cursor: default;
-    }
-    .pillar:hover { background: var(--dark-mid); }
-
-    .pillar-icon {
-      font-size: 32px;
-      margin-bottom: 16px;
-      display: block;
-    }
-
-    .pillar h3 {
-      font-family: 'Playfair Display', serif;
-      font-size: 18px;
-      margin-bottom: 8px;
-      color: var(--gold);
-    }
-
-    .pillar p {
-      font-size: 13px;
-      color: rgba(245,239,224,0.6);
-      line-height: 1.6;
-    }
-
-    /* ─── SIGNUP SECTION ────────────────────────────── */
-    .signup-section {
-      background: linear-gradient(160deg, #0d1b2a 0%, #1a2f4a 100%);
-      padding: 100px 24px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .signup-section::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 2px;
-      background: linear-gradient(90deg, transparent, var(--gold), transparent);
-    }
-
-    .signup-section::after {
-      content: '';
-      position: absolute;
-      bottom: 0; left: 0; right: 0;
-      height: 2px;
-      background: linear-gradient(90deg, transparent, var(--gold), transparent);
-    }
-
-    .signup-inner {
-      max-width: 600px;
-      margin: 0 auto;
-      text-align: center;
-    }
-
-    .signup-inner .section-label { color: var(--gold); }
-
-    .signup-inner .section-title {
-      color: var(--cream);
-      margin-bottom: 16px;
-    }
-
-    .signup-inner p {
-      color: rgba(245,239,224,0.65);
-      font-size: 16px;
-      line-height: 1.7;
-      margin-bottom: 40px;
-    }
-
-    .checklist-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      background: rgba(201,168,76,0.1);
-      border: 1px solid rgba(201,168,76,0.3);
-      padding: 12px 24px;
-      border-radius: 2px;
-      margin-bottom: 40px;
-      font-size: 14px;
-      color: var(--gold-light);
-      letter-spacing: 1px;
-    }
-
-    /* Override Kit form styles to match brand */
-    .kit-wrapper {
-      max-width: 460px;
-      margin: 0 auto;
-    }
-    .kit-wrapper .formkit-form {
-      background: transparent !important;
-      box-shadow: none !important;
-      border-radius: 0 !important;
-    }
-
-    /* ─── ABOUT ─────────────────────────────────────── */
-    .about {
-      background: var(--cream);
-      padding: 80px 24px;
-    }
-
-    .about-inner {
-      max-width: 700px;
-      margin: 0 auto;
-      text-align: center;
-    }
-
-    .about-inner .section-title { margin-bottom: 24px; }
-
+ 
     .about-inner p {
       font-size: 17px;
       line-height: 1.8;
       color: #444;
       margin-bottom: 16px;
     }
-
+ 
     .about-inner p strong { color: var(--red-ink); }
-
+ 
     /* ─── FOOTER ────────────────────────────────────── */
     footer {
       background: #070e18;
@@ -323,7 +355,7 @@
       text-align: center;
       border-top: 1px solid rgba(201,168,76,0.2);
     }
-
+ 
     footer .logo-text {
       font-family: 'Playfair Display', serif;
       font-size: 22px;
@@ -332,115 +364,130 @@
       text-transform: uppercase;
       margin-bottom: 12px;
     }
-
+ 
     footer p {
       font-size: 12px;
       color: rgba(245,239,224,0.3);
       letter-spacing: 2px;
     }
-
+ 
     footer a {
       color: rgba(201,168,76,0.6);
       text-decoration: none;
     }
     footer a:hover { color: var(--gold); }
-
-    /* ─── ANIMATIONS ────────────────────────────────── */
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(24px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
-
-    /* ─── RESPONSIVE ────────────────────────────────── */
-    @media (max-width: 600px) {
-      .pillars-grid { grid-template-columns: 1fr 1fr; }
-      .stamp-badge { width: 80px; height: 80px; line-height: 76px; }
-    }
   </style>
 </head>
 <body>
-
-<!-- ── HERO ─────────────────────────────────────────── -->
-<section class="hero">
-  <div class="hero-bg"></div>
-
-  <div class="stars" id="stars"></div>
-
-  <div class="hero-content">
-    <h1>ASIA<br/><span>UNLOCKED</span></h1>
-
-    <div class="hero-divider"></div>
-
-    <p class="hero-tagline">Your Insider Guide to Southeast Asia</p>
-
-    <p class="hero-sub">
-      For the people who are done with guidebook Asia.<br/>
-      Real intel on relocating, living and travelling — from people who actually live here.
-    </p>
-
-    <a href="#signup" class="cta-btn">Get the Free Bangkok Checklist</a>
-  </div>
-
-  <div class="scroll-hint">↓ scroll</div>
-</section>
-
-<!-- ── SIGNUP ────────────────────────────────────────── -->
-<section class="signup-section" id="signup">
-  <div class="signup-inner">
-    <p class="section-label">Free Download</p>
-    <h2 class="section-title">Bangkok Relocation Checklist</h2>
-
-    <div class="checklist-badge">
-      📋 &nbsp; Everything you need before you move — completely free
+ 
+<!-- ── NAV ───────────────────────────────────────────── -->
+<nav>
+  <a href="/" class="nav-logo">Asia Unlocked</a>
+  <a href="https://asiaunlocked.gumroad.com/l/rkvyf" class="nav-cta">Get the Guide — $19.99</a>
+</nav>
+ 
+<!-- ── GUIDE SECTION ─────────────────────────────────── -->
+<section class="guide-section" id="guide">
+  <div class="guide-inner">
+ 
+    <div class="guide-hero-card">
+      <div class="guide-eyebrow">Asia Unlocked · Edition 01 · April 2026</div>
+      <div class="guide-headline">Move to Thailand.<br>But do it right.</div>
+      <div class="guide-product-name">The Thailand Relocation Guide</div>
+      <div class="guide-subheadline">Decide where to live, what it costs, and how to move — without wasting weeks researching.</div>
+ 
+      <div class="guide-checklist">
+        <div class="guide-check-item">
+          <span class="guide-check-mark">✓</span>
+          10 cities ranked using a clear scoring system (cost, lifestyle, English, connectivity)
+        </div>
+        <div class="guide-check-item">
+          <span class="guide-check-mark">✓</span>
+          Real monthly costs — verified on the ground, not aggregator averages
+        </div>
+        <div class="guide-check-item">
+          <span class="guide-check-mark">✓</span>
+          DTV visa breakdown — who qualifies, real costs, how to apply
+        </div>
+        <div class="guide-check-item">
+          <span class="guide-check-mark">✓</span>
+          Your 30-day move plan — week by week
+        </div>
+        <div class="guide-check-item">
+          <span class="guide-check-mark">✓</span>
+          The 7 mistakes that cost people most
+        </div>
+      </div>
+ 
+      <div class="guide-clarity">
+        Most people spend weeks researching this. This guide gives you clarity in under an hour.
+      </div>
+ 
+      <div class="guide-cta-block">
+        <a href="https://asiaunlocked.gumroad.com/l/rkvyf" class="guide-btn">
+          Get the Thailand Relocation Guide — $19.99
+        </a>
+        <div class="guide-urgency">Early access pricing — will increase as the guide expands</div>
+      </div>
     </div>
-
-    <p>
-      Visas, banking, SIM cards, neighbourhoods, cost of living — the insider checklist
-      we wish we'd had before relocating. No fluff. Just what actually matters.
-    </p>
-
-    <div class="kit-wrapper">
-      <script src="https://f.convertkit.com/ckjs/ck.5.js"></script>
-      <form action="https://app.kit.com/forms/9323612/subscriptions" class="seva-form formkit-form" method="post" data-sv-form="9323612" data-uid="bad38e8715" data-format="inline" data-version="5" min-width="400 500 600 700 800" style="background-color:transparent;border-radius:0;">
-        <div data-style="card">
-          <div data-element="column" class="formkit-column" style="background-color:#1a3a5c;padding:30px;border-radius:4px;">
-            <div class="formkit-subheader" data-element="subheader" style="color:rgba(245,239,224,0.7);font-size:14px;margin-bottom:20px;text-align:center;">
-              Enter your email to get the free checklist
-            </div>
-            <ul class="formkit-alert formkit-alert-error" data-element="errors" data-group="alert"></ul>
-            <div data-element="fields" class="seva-fields formkit-fields">
-              <div class="formkit-field">
-                <input class="formkit-input" name="email_address" aria-label="Email Address" placeholder="your@email.com" required type="email"
-                  style="color:#2a2a2a;border-color:#c9a84c;border-radius:2px;font-size:15px;padding:14px 16px;width:100%;margin-bottom:12px;"/>
-              </div>
-              <button data-element="submit" class="formkit-submit" style="background-color:#c9a84c;color:#0d1b2a;border-radius:2px;font-weight:700;font-size:14px;letter-spacing:3px;text-transform:uppercase;padding:14px 32px;width:100%;border:none;cursor:pointer;">
-                <div class="formkit-spinner"><div></div><div></div><div></div></div>
-                <span>SEND ME THE CHECKLIST</span>
-              </button>
-            </div>
-            <div class="formkit-guarantee" style="color:rgba(245,239,224,0.4);font-size:12px;text-align:center;margin-top:16px;">
-              No spam. Unsubscribe any time.
-            </div>
+ 
+    <div class="guide-grid">
+ 
+      <div class="guide-card">
+        <div class="guide-card-label">The City Index™</div>
+        <div class="guide-card-title">10 cities ranked using a clear scoring system.</div>
+        <div class="guide-card-body">Cost, lifestyle, English fluency, expat infrastructure and connectivity — each city scored across all five. No gut feel. No opinions. Just the numbers that help you decide.</div>
+        <div class="tier-row">
+          <div class="tier-badge">
+            <div class="tier-badge-label" style="color:#4a9e6e;">Tier A</div>
+            <div class="tier-badge-name">Easy Entry</div>
+            <div class="tier-badge-cities">BKK · CNX · HKT · PTY</div>
+          </div>
+          <div class="tier-badge">
+            <div class="tier-badge-label" style="color:#c9a84c;">Tier B</div>
+            <div class="tier-badge-name">Balanced</div>
+            <div class="tier-badge-cities">CNX RAI · HHN · KLT</div>
+          </div>
+          <div class="tier-badge">
+            <div class="tier-badge-label" style="color:#c0504d;">Tier C</div>
+            <div class="tier-badge-name">Lifestyle First</div>
+            <div class="tier-badge-cities">PAI · KPG</div>
           </div>
         </div>
-      </form>
+      </div>
+ 
+      <div class="guide-card">
+        <div class="guide-card-label">What's inside</div>
+        <ul class="contents-list">
+          <li><span class="contents-num">→</span>Start here · which city fits you</li>
+          <li><span class="contents-num">01</span>Why Thailand · the honest case</li>
+          <li><span class="contents-num">02</span>The City Index · scores + rankings</li>
+          <li><span class="contents-num">03</span>Visas · DTV deep dive</li>
+          <li><span class="contents-num">04</span>Cost of living · real numbers</li>
+          <li><span class="contents-num">05</span>Banking + money</li>
+          <li><span class="contents-num">06</span>Your 30-day relocation plan</li>
+          <li><span class="contents-num">07</span>The lifestyle reality</li>
+          <li><span class="contents-num">08</span>The 7 mistakes that cost most</li>
+        </ul>
+      </div>
+ 
     </div>
   </div>
 </section>
-
+ 
 <!-- ── ABOUT ─────────────────────────────────────────── -->
 <section class="about">
   <div class="about-inner">
-    <p class="section-label" style="color:var(--red-ink)">Who we are</p>
+    <p class="section-label">Who we are</p>
     <h2 class="section-title">Not a guidebook. Not an influencer.</h2>
     <p>
       Asia Unlocked is built by people who actually live here.
       <strong>The insider knowledge that doesn't exist in English yet.</strong>
     </p>
     <p>
-      We cover the places everyone skips — off the beaten path over the tourist trail,
-      what an apartment actually costs versus what the blogs say, which visa actually
-      works for long-term stays. Real intel for people making real decisions about their lives.
+      We cover the places everyone skips — what an apartment actually costs versus what the blogs say,
+      which visa actually works for long-term stays, where to actually live once you arrive.
+      Real intel for people making real decisions about their lives.
     </p>
     <p>
       Whether you're relocating, working remotely or just done with the same
@@ -448,29 +495,16 @@
     </p>
   </div>
 </section>
-
+ 
 <!-- ── FOOTER ────────────────────────────────────────── -->
 <footer>
   <div class="logo-text">Asia Unlocked</div>
   <p>
-    <a href="/cdn-cgi/l/email-protection#6e060b020201400f1d070f1b0002010d050b0a2e09030f0702400d0103"><span class="__cf_email__" data-cfemail="442c2128282b6a25372d25312a282b272f2120042329252d286a272b29">[email&#160;protected]</span></a>
+    <a href="mailto:hello@asiaunlocked.guide">hello@asiaunlocked.guide</a>
     &nbsp;·&nbsp; asiaunlocked.guide
     &nbsp;·&nbsp; © 2026
   </p>
 </footer>
-
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-  // Generate stars
-  const starsEl = document.getElementById('stars');
-  for (let i = 0; i < 80; i++) {
-    const s = document.createElement('div');
-    s.className = 'star';
-    const size = Math.random() * 2.5 + 0.5;
-    s.style.cssText = `
-      width:${size}px; height:${size}px;
-      left:${Math.random()*100}%;
-      top:${Math.random()*100}%;
-      --dur:${2 + Math.random()*4}s;
-      --delay:${Math.random()*4}s;
-    `;
-    starsEl
+ 
+</body>
+</html>
