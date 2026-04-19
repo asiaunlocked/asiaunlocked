@@ -3,28 +3,19 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>The Thailand Relocation Guide — Asia Unlocked</title>
-  <meta name="description" content="The Thailand Relocation Guide — real numbers, insider voice, no fluff. 10 cities scored and ranked. Visas, cost of living, banking and your 30-day move plan."/>
-  <meta name="theme-color" content="#0d1b2a"/>
-  <meta name="agd-partner-manual-verification" />
-
-  <!-- SEO -->
+  <title>Asia Unlocked — Insider Relocation Guides for Southeast Asia</title>
+  <meta name="description" content="Real numbers. Insider voice. No fluff. Relocation guides for Southeast Asia built by people who actually live there. Thailand and Vietnam guides available now."/>
+  <meta name="theme-color" content="#070e18"/>
   <meta name="robots" content="index, follow"/>
+  <meta name="agd-partner-manual-verification"/>
   <link rel="canonical" href="https://asiaunlocked.guide/"/>
-
-  <!-- Open Graph (Facebook + Instagram link previews) -->
   <meta property="og:type" content="website"/>
   <meta property="og:url" content="https://asiaunlocked.guide/"/>
-  <meta property="og:title" content="The Thailand Relocation Guide — Asia Unlocked"/>
-  <meta property="og:description" content="Move to Thailand. But do it right. 10 cities scored and ranked. Real costs, DTV visa breakdown, 30-day move plan. No fluff."/>
+  <meta property="og:title" content="Asia Unlocked — Insider Relocation Guides for Southeast Asia"/>
+  <meta property="og:description" content="Real numbers. Insider voice. No fluff. Thailand and Vietnam guides now live."/>
   <meta property="og:site_name" content="Asia Unlocked"/>
-
-  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image"/>
-  <meta name="twitter:title" content="The Thailand Relocation Guide — Asia Unlocked"/>
-  <meta name="twitter:description" content="Move to Thailand. But do it right. 10 cities scored and ranked. Real costs, DTV visa breakdown, 30-day move plan."/>
-
-  <!-- Google Analytics 4 -->
+ 
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-YQE1LZWRW7"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -32,504 +23,1089 @@
     gtag('js', new Date());
     gtag('config', 'G-YQE1LZWRW7');
   </script>
+ 
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Lato:wght@300;400;700&display=swap" rel="stylesheet"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet"/>
+ 
   <style>
     :root {
-      --gold: #c9a84c;
+      --gold:       #c9a84c;
       --gold-light: #e8c87a;
-      --dark: #0d1b2a;
-      --dark-mid: #1a3a5c;
-      --cream: #f5efe0;
-      --red-ink: #8b2e0a;
-      --text: #2a2a2a;
+      --gold-dim:   rgba(201,168,76,0.15);
+      --dark:       #070e18;
+      --dark-card:  #0d1b2a;
+      --dark-mid:   #112236;
+      --dark-border:#1e3350;
+      --cream:      #f5efe0;
+      --cream-dim:  rgba(245,239,224,0.65);
+      --cream-faint:rgba(245,239,224,0.25);
+      --red:        #8b2e0a;
+      --green:      #3a7d5c;
+      --text:       #2a2a2a;
+      --radius:     3px;
     }
-
+ 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
-
+ 
     body {
       font-family: 'Lato', sans-serif;
       background: var(--dark);
       color: var(--cream);
       overflow-x: hidden;
     }
-
-    /* ─── NAV ───────────────────────────────────────── */
+ 
+    /* ── NOISE OVERLAY ─────────────────────────────────── */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.4;
+    }
+ 
+    /* ── NAV ───────────────────────────────────────────── */
     nav {
-      padding: 20px 40px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      border-bottom: 1px solid rgba(201,168,76,0.15);
-      background: #070e18;
+      padding: 18px 48px;
+      background: rgba(7,14,24,0.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--gold-dim);
     }
-
+ 
     .nav-logo {
       font-family: 'Playfair Display', serif;
-      font-size: 18px;
+      font-size: 17px;
       font-weight: 700;
       color: var(--gold);
-      letter-spacing: 4px;
+      letter-spacing: 5px;
       text-transform: uppercase;
       text-decoration: none;
     }
-
-    .nav-cta {
-      display: inline-block;
-      background: var(--gold);
-      color: var(--dark);
-      font-family: 'Lato', sans-serif;
-      font-weight: 700;
-      font-size: 12px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      text-decoration: none;
-      padding: 10px 24px;
-      border-radius: 2px;
-      transition: background 0.2s ease;
+ 
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 28px;
     }
-
-    .nav-cta:hover { background: var(--gold-light); }
-
-    /* ─── GUIDE SECTION ─────────────────────────────── */
-    .guide-section {
-      background: linear-gradient(160deg, #0d1b2a 0%, #1a2f4a 100%);
-      padding: 80px 24px 100px;
-      position: relative;
-    }
-
-    .guide-section::after {
-      content: '';
-      position: absolute;
-      bottom: 0; left: 0; right: 0;
-      height: 2px;
-      background: linear-gradient(90deg, transparent, var(--gold), transparent);
-    }
-
-    .guide-inner {
-      max-width: 860px;
-      margin: 0 auto;
-    }
-
-    /* Hero card */
-    .guide-hero-card {
-      background: #111e2e;
-      border: 1px solid rgba(201,168,76,0.2);
-      border-radius: 4px;
-      padding: 56px 48px;
-      margin-bottom: 24px;
-      position: relative;
-    }
-
-    .guide-hero-card::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 3px;
-      background: var(--gold);
-      border-radius: 4px 4px 0 0;
-    }
-
-    .guide-eyebrow {
+ 
+    .nav-link {
       font-size: 11px;
       font-weight: 700;
-      letter-spacing: 0.15em;
-      color: var(--gold);
+      letter-spacing: 2px;
       text-transform: uppercase;
-      margin-bottom: 20px;
+      color: var(--cream-dim);
+      text-decoration: none;
+      transition: color 0.2s;
     }
-
-    .guide-headline {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(2.2rem, 5vw, 3.6rem);
-      font-weight: 900;
-      color: var(--cream);
-      line-height: 1.1;
-      margin-bottom: 10px;
-    }
-
-    .guide-product-name {
-      font-size: 12px;
+    .nav-link:hover { color: var(--gold); }
+ 
+    .nav-cta {
+      font-size: 11px;
       font-weight: 700;
-      letter-spacing: 0.12em;
-      color: rgba(245,239,224,0.35);
+      letter-spacing: 2px;
       text-transform: uppercase;
+      color: var(--dark);
+      background: var(--gold);
+      padding: 10px 22px;
+      border-radius: var(--radius);
+      text-decoration: none;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .nav-cta:hover { background: var(--gold-light); transform: translateY(-1px); }
+ 
+    /* ── HERO ──────────────────────────────────────────── */
+    .hero {
+      position: relative;
+      min-height: 92vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 80px 24px;
+      overflow: hidden;
+    }
+ 
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 80% 60% at 50% 0%, rgba(201,168,76,0.07) 0%, transparent 70%),
+        radial-gradient(ellipse 50% 40% at 80% 80%, rgba(26,58,92,0.4) 0%, transparent 60%),
+        linear-gradient(170deg, #070e18 0%, #0d1b2a 50%, #070e18 100%);
+    }
+ 
+    /* Decorative grid lines */
+    .hero-bg::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(201,168,76,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(201,168,76,0.04) 1px, transparent 1px);
+      background-size: 60px 60px;
+      mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 30%, transparent 80%);
+    }
+ 
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+      max-width: 860px;
+      width: 100%;
+      text-align: center;
+    }
+ 
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 28px;
+      opacity: 0;
+      animation: fadeUp 0.7s 0.1s ease forwards;
+    }
+ 
+    .hero-eyebrow::before,
+    .hero-eyebrow::after {
+      content: '';
+      display: block;
+      width: 32px;
+      height: 1px;
+      background: var(--gold);
+      opacity: 0.5;
+    }
+ 
+    .hero-headline {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(3rem, 7vw, 5.2rem);
+      font-weight: 900;
+      line-height: 1.05;
+      color: var(--cream);
+      margin-bottom: 10px;
+      opacity: 0;
+      animation: fadeUp 0.7s 0.25s ease forwards;
+    }
+ 
+    .hero-headline em {
+      font-style: italic;
+      color: var(--gold);
+    }
+ 
+    .hero-sub {
+      font-size: 18px;
+      font-weight: 300;
+      color: var(--cream-dim);
+      line-height: 1.7;
+      max-width: 560px;
+      margin: 20px auto 40px;
+      opacity: 0;
+      animation: fadeUp 0.7s 0.4s ease forwards;
+    }
+ 
+    .hero-ctas {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      opacity: 0;
+      animation: fadeUp 0.7s 0.55s ease forwards;
+    }
+ 
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--gold);
+      color: var(--dark);
+      font-weight: 700;
+      font-size: 14px;
+      letter-spacing: 0.5px;
+      padding: 16px 32px;
+      border-radius: var(--radius);
+      text-decoration: none;
+      transition: all 0.25s ease;
+    }
+    .btn-primary:hover {
+      background: var(--gold-light);
+      transform: translateY(-2px);
+      box-shadow: 0 12px 40px rgba(201,168,76,0.25);
+    }
+ 
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: transparent;
+      color: var(--cream);
+      font-weight: 700;
+      font-size: 14px;
+      letter-spacing: 0.5px;
+      padding: 15px 32px;
+      border-radius: var(--radius);
+      border: 1px solid rgba(245,239,224,0.25);
+      text-decoration: none;
+      transition: all 0.25s ease;
+    }
+    .btn-secondary:hover {
+      border-color: var(--gold);
+      color: var(--gold);
+      transform: translateY(-2px);
+    }
+ 
+    .hero-proof {
+      margin-top: 52px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 32px;
+      flex-wrap: wrap;
+      opacity: 0;
+      animation: fadeUp 0.7s 0.7s ease forwards;
+    }
+ 
+    .proof-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+    }
+ 
+    .proof-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--gold);
+      line-height: 1;
+    }
+ 
+    .proof-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--cream-faint);
+    }
+ 
+    .proof-divider {
+      width: 1px;
+      height: 36px;
+      background: var(--gold-dim);
+    }
+ 
+    /* ── LEAD MAGNET BAND ──────────────────────────────── */
+    .lead-band {
+      background: linear-gradient(135deg, #0d1b2a 0%, #112236 100%);
+      border-top: 1px solid var(--gold-dim);
+      border-bottom: 1px solid var(--gold-dim);
+      padding: 56px 24px;
+    }
+ 
+    .lead-band-inner {
+      max-width: 860px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: center;
+    }
+ 
+    .lead-tag {
+      display: inline-block;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--green);
+      background: rgba(58,125,92,0.12);
+      border: 1px solid rgba(58,125,92,0.3);
+      padding: 5px 12px;
+      border-radius: 2px;
+      margin-bottom: 16px;
+    }
+ 
+    .lead-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--cream);
+      line-height: 1.2;
+      margin-bottom: 12px;
+    }
+ 
+    .lead-body {
+      font-size: 15px;
+      font-weight: 300;
+      color: var(--cream-dim);
+      line-height: 1.7;
       margin-bottom: 24px;
     }
-
-    .guide-subheadline {
-      font-size: 18px;
-      color: rgba(245,239,224,0.72);
-      line-height: 1.65;
-      max-width: 560px;
-      margin-bottom: 36px;
+ 
+    .lead-form {
+      display: flex;
+      gap: 8px;
     }
-
-    .guide-checklist { margin-bottom: 32px; }
-
-    .guide-check-item {
+ 
+    .lead-input {
+      flex: 1;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid var(--dark-border);
+      border-radius: var(--radius);
+      padding: 13px 16px;
+      font-family: 'Lato', sans-serif;
+      font-size: 14px;
+      color: var(--cream);
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    .lead-input::placeholder { color: rgba(245,239,224,0.3); }
+    .lead-input:focus { border-color: var(--gold); }
+ 
+    .lead-submit {
+      background: var(--green);
+      color: white;
+      font-family: 'Lato', sans-serif;
+      font-weight: 700;
+      font-size: 13px;
+      letter-spacing: 1px;
+      padding: 13px 22px;
+      border: none;
+      border-radius: var(--radius);
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.2s;
+    }
+    .lead-submit:hover {
+      background: #4a9e72;
+      transform: translateY(-1px);
+    }
+ 
+    .lead-small {
+      font-size: 11px;
+      color: rgba(245,239,224,0.25);
+      margin-top: 10px;
+      letter-spacing: 0.3px;
+    }
+ 
+    .lead-includes {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+ 
+    .lead-include-item {
       display: flex;
       align-items: flex-start;
       gap: 12px;
-      font-size: 15px;
-      color: rgba(245,239,224,0.78);
-      margin-bottom: 11px;
+      font-size: 14px;
+      color: var(--cream-dim);
       line-height: 1.5;
     }
-
+ 
+    .lead-check {
+      color: var(--green);
+      font-weight: 700;
+      font-size: 14px;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+ 
+    /* ── GUIDES SECTION ────────────────────────────────── */
+    .guides {
+      padding: 96px 24px;
+      position: relative;
+    }
+ 
+    .guides::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    }
+ 
+    .section-header {
+      text-align: center;
+      margin-bottom: 56px;
+    }
+ 
+    .section-eyebrow {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--red);
+      margin-bottom: 12px;
+    }
+ 
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+      font-weight: 700;
+      color: var(--cream);
+      line-height: 1.2;
+    }
+ 
+    .guides-grid {
+      max-width: 920px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+ 
+    .guide-card {
+      background: var(--dark-card);
+      border: 1px solid var(--dark-border);
+      border-radius: 4px;
+      overflow: hidden;
+      transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+      display: flex;
+      flex-direction: column;
+    }
+ 
+    .guide-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(201,168,76,0.4);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+    }
+ 
+    .guide-card-top {
+      height: 4px;
+      background: var(--gold);
+    }
+ 
+    .guide-card-body {
+      padding: 32px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+ 
+    .guide-flag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 16px;
+    }
+ 
+    .guide-flag::before {
+      content: '';
+      display: block;
+      width: 20px;
+      height: 1px;
+      background: var(--gold);
+    }
+ 
+    .guide-card-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--cream);
+      line-height: 1.2;
+      margin-bottom: 8px;
+    }
+ 
+    .guide-card-tagline {
+      font-size: 13px;
+      color: rgba(245,239,224,0.4);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      font-weight: 700;
+    }
+ 
+    .guide-card-desc {
+      font-size: 14px;
+      font-weight: 300;
+      color: var(--cream-dim);
+      line-height: 1.7;
+      margin-bottom: 24px;
+      flex: 1;
+    }
+ 
+    .guide-checklist {
+      margin-bottom: 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+ 
+    .guide-check {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 13px;
+      color: rgba(245,239,224,0.7);
+      line-height: 1.5;
+    }
+ 
     .guide-check-mark {
       color: var(--gold);
       font-weight: 700;
       flex-shrink: 0;
-      font-size: 15px;
     }
-
-    .guide-clarity {
-      border-left: 3px solid var(--gold);
-      padding-left: 20px;
-      font-size: 16px;
-      color: var(--cream);
-      font-style: italic;
-      line-height: 1.65;
-      margin-bottom: 40px;
-      max-width: 520px;
-    }
-
-    .guide-cta-block {
+ 
+    .guide-card-footer {
       display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 10px;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 32px;
+      border-top: 1px solid var(--dark-border);
+      background: rgba(0,0,0,0.15);
     }
-
-    .guide-btn {
+ 
+    .guide-price {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--cream);
+    }
+ 
+    .guide-price-sub {
+      font-size: 11px;
+      color: rgba(245,239,224,0.3);
+      margin-top: 2px;
+    }
+ 
+    .guide-buy-btn {
       display: inline-block;
       background: var(--gold);
       color: var(--dark);
-      font-family: 'Lato', sans-serif;
       font-weight: 700;
-      font-size: 15px;
+      font-size: 13px;
       letter-spacing: 0.5px;
+      padding: 12px 24px;
+      border-radius: var(--radius);
       text-decoration: none;
-      padding: 18px 36px;
-      border-radius: 2px;
-      transition: all 0.3s ease;
+      transition: all 0.2s;
     }
-
-    .guide-btn:hover {
+    .guide-buy-btn:hover {
       background: var(--gold-light);
-      transform: translateY(-2px);
-      box-shadow: 0 8px 30px rgba(201,168,76,0.3);
+      transform: translateY(-1px);
     }
-
-    .guide-urgency {
-      font-size: 12px;
-      color: rgba(245,239,224,0.3);
-      letter-spacing: 0.3px;
+ 
+    /* City tier pills in card */
+    .tier-pills {
+      display: flex;
+      gap: 6px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
     }
-
-    /* Bottom grid */
-    .guide-grid {
+ 
+    .tier-pill {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      padding: 4px 10px;
+      border-radius: 2px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--dark-border);
+      color: var(--cream-dim);
+    }
+ 
+    .tier-pill.a { border-color: rgba(58,125,92,0.5); color: #5bba8c; }
+    .tier-pill.b { border-color: rgba(201,168,76,0.4); color: var(--gold); }
+    .tier-pill.c { border-color: rgba(139,46,10,0.4); color: #c0604d; }
+ 
+    /* ── INDEX SECTION ─────────────────────────────────── */
+    .index-section {
+      padding: 80px 24px;
+      background: linear-gradient(170deg, #0a1522 0%, #070e18 100%);
+      border-top: 1px solid var(--gold-dim);
+      border-bottom: 1px solid var(--gold-dim);
+    }
+ 
+    .index-inner {
+      max-width: 860px;
+      margin: 0 auto;
+    }
+ 
+    .index-intro {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 16px;
+      gap: 48px;
+      align-items: center;
+      margin-bottom: 48px;
     }
-
-    @media (max-width: 640px) {
-      .guide-grid { grid-template-columns: 1fr; }
-      .guide-hero-card { padding: 36px 24px; }
-      nav { padding: 16px 20px; }
-      .nav-logo { font-size: 15px; letter-spacing: 2px; }
-    }
-
-    .guide-card {
-      background: #111e2e;
-      border: 1px solid rgba(201,168,76,0.15);
-      border-radius: 4px;
-      padding: 28px;
-    }
-
-    .guide-card-label {
-      font-size: 10px;
-      font-weight: 700;
-      letter-spacing: 0.14em;
-      color: var(--gold);
-      text-transform: uppercase;
-      margin-bottom: 12px;
-    }
-
-    .guide-card-title {
+ 
+    .index-left .section-eyebrow { text-align: left; }
+ 
+    .index-title {
       font-family: 'Playfair Display', serif;
-      font-size: 1.1rem;
-      color: var(--cream);
-      margin-bottom: 10px;
-      line-height: 1.3;
-    }
-
-    .guide-card-body {
-      font-size: 13px;
-      color: rgba(245,239,224,0.5);
-      line-height: 1.65;
-    }
-
-    .tier-row {
-      display: flex;
-      gap: 8px;
-      margin-top: 16px;
-    }
-
-    .tier-badge {
-      flex: 1;
-      border-radius: 2px;
-      padding: 10px 8px;
-      text-align: center;
-      border: 1px solid rgba(201,168,76,0.12);
-      background: rgba(255,255,255,0.02);
-    }
-
-    .tier-badge-label {
-      font-size: 9px;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      margin-bottom: 4px;
-    }
-
-    .tier-badge-name {
-      font-size: 12px;
+      font-size: clamp(1.6rem, 3vw, 2.4rem);
       font-weight: 700;
       color: var(--cream);
+      line-height: 1.2;
+      margin-bottom: 16px;
     }
-
-    .tier-badge-cities {
-      font-size: 10px;
-      color: rgba(245,239,224,0.35);
-      margin-top: 3px;
+ 
+    .index-body {
+      font-size: 15px;
+      font-weight: 300;
+      color: var(--cream-dim);
+      line-height: 1.7;
     }
-
-    .contents-list {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    .contents-list li {
-      display: flex;
-      align-items: baseline;
+ 
+    .index-categories {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
       gap: 12px;
-      padding: 9px 0;
-      border-bottom: 1px solid rgba(201,168,76,0.08);
-      font-size: 13px;
-      color: rgba(245,239,224,0.65);
     }
-
-    .contents-list li:last-child { border-bottom: none; }
-
-    .contents-num {
-      font-size: 11px;
-      color: var(--gold);
+ 
+    .index-cat {
+      background: var(--dark-card);
+      border: 1px solid var(--dark-border);
+      border-radius: var(--radius);
+      padding: 18px 14px;
+      text-align: center;
+      transition: border-color 0.2s;
+    }
+    .index-cat:hover { border-color: rgba(201,168,76,0.3); }
+ 
+    .index-cat-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem;
       font-weight: 700;
-      min-width: 20px;
-      flex-shrink: 0;
+      color: var(--gold);
+      margin-bottom: 6px;
+      line-height: 1;
     }
-
-    /* ─── ABOUT ─────────────────────────────────────── */
+ 
+    .index-cat-name {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--cream-faint);
+      line-height: 1.4;
+    }
+ 
+    /* ── ABOUT ─────────────────────────────────────────── */
     .about {
+      padding: 96px 24px;
       background: var(--cream);
-      padding: 80px 24px;
     }
-
+ 
     .about-inner {
-      max-width: 700px;
+      max-width: 680px;
       margin: 0 auto;
       text-align: center;
     }
-
-    .section-label {
-      text-align: center;
-      font-size: 11px;
-      letter-spacing: 5px;
-      text-transform: uppercase;
-      color: var(--red-ink);
-      margin-bottom: 12px;
-    }
-
-    .section-title {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(28px, 4vw, 42px);
+ 
+    .about-eyebrow {
+      font-size: 10px;
       font-weight: 700;
-      text-align: center;
-      color: var(--dark);
-      margin-bottom: 24px;
-    }
-
-    .about-inner p {
-      font-size: 17px;
-      line-height: 1.8;
-      color: #444;
-      margin-bottom: 16px;
-    }
-
-    .about-inner p strong { color: var(--red-ink); }
-
-    /* ─── FOOTER ────────────────────────────────────── */
-    footer {
-      background: #070e18;
-      padding: 40px 24px;
-      text-align: center;
-      border-top: 1px solid rgba(201,168,76,0.2);
-    }
-
-    footer .logo-text {
-      font-family: 'Playfair Display', serif;
-      font-size: 22px;
-      color: var(--gold);
       letter-spacing: 4px;
       text-transform: uppercase;
+      color: var(--red);
+      margin-bottom: 14px;
+    }
+ 
+    .about-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+      font-weight: 700;
+      color: #0d1b2a;
+      line-height: 1.2;
+      margin-bottom: 28px;
+    }
+ 
+    .about p {
+      font-size: 17px;
+      font-weight: 300;
+      line-height: 1.85;
+      color: #555;
+      margin-bottom: 18px;
+    }
+ 
+    .about p strong { color: var(--red); font-weight: 700; }
+ 
+    .about-rule {
+      width: 60px;
+      height: 2px;
+      background: var(--gold);
+      margin: 32px auto;
+    }
+ 
+    /* ── FOOTER ────────────────────────────────────────── */
+    footer {
+      background: #040a10;
+      padding: 52px 24px 40px;
+      border-top: 1px solid var(--gold-dim);
+    }
+ 
+    .footer-inner {
+      max-width: 860px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 32px;
+      margin-bottom: 40px;
+    }
+ 
+    .footer-brand .footer-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--gold);
+      letter-spacing: 5px;
+      text-transform: uppercase;
       margin-bottom: 12px;
     }
-
-    footer p {
-      font-size: 12px;
+ 
+    .footer-brand p {
+      font-size: 13px;
+      font-weight: 300;
       color: rgba(245,239,224,0.3);
-      letter-spacing: 2px;
+      line-height: 1.7;
     }
-
-    footer a {
-      color: rgba(201,168,76,0.6);
+ 
+    .footer-col-title {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 16px;
+    }
+ 
+    .footer-links {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+ 
+    .footer-links a {
+      font-size: 13px;
+      font-weight: 300;
+      color: rgba(245,239,224,0.4);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover { color: var(--gold); }
+ 
+    .footer-bottom {
+      max-width: 860px;
+      margin: 0 auto;
+      padding-top: 24px;
+      border-top: 1px solid rgba(201,168,76,0.08);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+ 
+    .footer-bottom p {
+      font-size: 11px;
+      color: rgba(245,239,224,0.2);
+      letter-spacing: 1px;
+    }
+ 
+    .footer-bottom a {
+      color: rgba(201,168,76,0.4);
       text-decoration: none;
     }
-    footer a:hover { color: var(--gold); }
+    .footer-bottom a:hover { color: var(--gold); }
+ 
+    /* ── ANIMATIONS ────────────────────────────────────── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+ 
+    /* ── RESPONSIVE ────────────────────────────────────── */
+    @media (max-width: 768px) {
+      nav { padding: 16px 20px; }
+      .nav-right .nav-link { display: none; }
+      .hero-headline { font-size: 2.6rem; }
+      .hero-sub { font-size: 16px; }
+      .hero-ctas { flex-direction: column; align-items: stretch; text-align: center; }
+      .lead-band-inner { grid-template-columns: 1fr; gap: 32px; }
+      .guides-grid { grid-template-columns: 1fr; }
+      .index-intro { grid-template-columns: 1fr; gap: 24px; }
+      .index-categories { grid-template-columns: repeat(3, 1fr); }
+      .footer-inner { grid-template-columns: 1fr; gap: 28px; }
+      .footer-bottom { flex-direction: column; align-items: flex-start; }
+    }
   </style>
 </head>
 <body>
-
-<!-- ── NAV ───────────────────────────────────────────── -->
+ 
+<!-- ── NAV ──────────────────────────────────────────────── -->
 <nav>
   <a href="/" class="nav-logo">Asia Unlocked</a>
-  <a href="https://asiaunlocked.gumroad.com/l/rkvyf" class="nav-cta">Get the Guide — $19.99</a>
+  <div class="nav-right">
+    <a href="#guides" class="nav-link">Guides</a>
+    <a href="#index" class="nav-link">City Index</a>
+    <a href="#about" class="nav-link">About</a>
+    <a href="#guides" class="nav-cta">Get a Guide</a>
+  </div>
 </nav>
-
-<!-- ── GUIDE SECTION ─────────────────────────────────── -->
-<section class="guide-section" id="guide">
-  <div class="guide-inner">
-
-    <div class="guide-hero-card">
-      <div class="guide-eyebrow">Asia Unlocked · Edition 01 · April 2026</div>
-      <div class="guide-headline">Move to Thailand.<br>But do it right.</div>
-      <div class="guide-product-name">The Thailand Relocation Guide</div>
-      <div class="guide-subheadline">Decide where to live, what it costs, and how to move — without wasting weeks researching.</div>
-
-      <div class="guide-checklist">
-        <div class="guide-check-item">
-          <span class="guide-check-mark">✓</span>
-          10 cities ranked using a clear scoring system (cost, lifestyle, English, connectivity)
-        </div>
-        <div class="guide-check-item">
-          <span class="guide-check-mark">✓</span>
-          Real monthly costs — verified on the ground, not aggregator averages
-        </div>
-        <div class="guide-check-item">
-          <span class="guide-check-mark">✓</span>
-          DTV visa breakdown — who qualifies, real costs, how to apply
-        </div>
-        <div class="guide-check-item">
-          <span class="guide-check-mark">✓</span>
-          Your 30-day move plan — week by week
-        </div>
-        <div class="guide-check-item">
-          <span class="guide-check-mark">✓</span>
-          The 7 mistakes that cost people most
-        </div>
-      </div>
-
-      <div class="guide-clarity">
-        Most people spend weeks researching this. This guide gives you clarity in under an hour.
-      </div>
-
-      <div class="guide-cta-block">
-        <a href="https://asiaunlocked.gumroad.com/l/rkvyf" class="guide-btn">
-          Get the Thailand Relocation Guide — $19.99
-        </a>
-        <div class="guide-urgency">Early access pricing — will increase as the guide expands</div>
-      </div>
+ 
+<!-- ── HERO ─────────────────────────────────────────────── -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-inner">
+    <h1 class="hero-headline">
+      Real intel.<br>Real numbers.<br><em>Southeast Asia.</em>
+    </h1>
+    <p class="hero-sub">
+      Real relocation guides for Southeast Asia. Built by people who actually live there, for people making real decisions about where to go next.
+    </p>
+    <div class="hero-ctas">
+      <a href="#lead" class="btn-secondary">↓ Free: SEA Relocation Cheat Sheet</a>
+      <a href="#guides" class="btn-primary">Browse the Guides →</a>
     </div>
-
-    <div class="guide-grid">
-
-      <div class="guide-card">
-        <div class="guide-card-label">The City Index™</div>
-        <div class="guide-card-title">10 cities ranked using a clear scoring system.</div>
-        <div class="guide-card-body">Cost, lifestyle, English fluency, expat infrastructure and connectivity — each city scored across all five. No gut feel. No opinions. Just the numbers that help you decide.</div>
-        <div class="tier-row">
-          <div class="tier-badge">
-            <div class="tier-badge-label" style="color:#4a9e6e;">Tier A</div>
-            <div class="tier-badge-name">Easy Entry</div>
-            <div class="tier-badge-cities">BKK · CNX · HKT · PTY</div>
-          </div>
-          <div class="tier-badge">
-            <div class="tier-badge-label" style="color:#c9a84c;">Tier B</div>
-            <div class="tier-badge-name">Balanced</div>
-            <div class="tier-badge-cities">CNX RAI · HHN · KLT</div>
-          </div>
-          <div class="tier-badge">
-            <div class="tier-badge-label" style="color:#c0504d;">Tier C</div>
-            <div class="tier-badge-name">Lifestyle First</div>
-            <div class="tier-badge-cities">PAI · KPG</div>
-          </div>
-        </div>
+    <div class="hero-proof">
+      <div class="proof-item">
+        <div class="proof-num">17</div>
+        <div class="proof-label">Cities scored</div>
       </div>
-
-      <div class="guide-card">
-        <div class="guide-card-label">What's inside</div>
-        <ul class="contents-list">
-          <li><span class="contents-num">→</span>Start here · which city fits you</li>
-          <li><span class="contents-num">01</span>Why Thailand · the honest case</li>
-          <li><span class="contents-num">02</span>The City Index · scores + rankings</li>
-          <li><span class="contents-num">03</span>Visas · DTV deep dive</li>
-          <li><span class="contents-num">04</span>Cost of living · real numbers</li>
-          <li><span class="contents-num">05</span>Banking + money</li>
-          <li><span class="contents-num">06</span>Your 30-day relocation plan</li>
-          <li><span class="contents-num">07</span>The lifestyle reality</li>
-          <li><span class="contents-num">08</span>The 7 mistakes that cost most</li>
-        </ul>
+      <div class="proof-divider"></div>
+      <div class="proof-item">
+        <div class="proof-num">2</div>
+        <div class="proof-label">Countries covered</div>
       </div>
-
+      <div class="proof-divider"></div>
+      <div class="proof-item">
+        <div class="proof-num">Apr '26</div>
+        <div class="proof-label">Verified</div>
+      </div>
+      <div class="proof-divider"></div>
+      <div class="proof-item">
+        <div class="proof-num">0</div>
+        <div class="proof-label">Tourist fluff</div>
+      </div>
     </div>
   </div>
 </section>
-
-<!-- ── ABOUT ─────────────────────────────────────────── -->
-<section class="about">
+ 
+<!-- ── LEAD MAGNET ───────────────────────────────────────── -->
+<section class="lead-band" id="lead">
+  <div class="lead-band-inner">
+    <div>
+      <div class="lead-tag">Free download</div>
+      <h2 class="lead-title">The SEA Relocation<br>Cheat Sheet</h2>
+      <p class="lead-body">The five things that matter most — visa pathways, real cost benchmarks, city quick picks — distilled into one page. Free, instant, no fluff.</p>
+      <div class="lead-form">
+        <input type="email" class="lead-input" placeholder="your@email.com"/>
+        <button class="lead-submit">Send it →</button>
+      </div>
+      <p class="lead-small">No spam. Unsubscribe anytime. You'll also get new guide notifications.</p>
+    </div>
+    <div class="lead-includes">
+      <div class="lead-include-item">
+        <span class="lead-check">✓</span>
+        <span>Best visa option by stay length — Thailand and Vietnam, side by side</span>
+      </div>
+      <div class="lead-include-item">
+        <span class="lead-check">✓</span>
+        <span>Real cost benchmarks: $700, $1,100, and $1,800/month lifestyles mapped to specific cities</span>
+      </div>
+      <div class="lead-include-item">
+        <span class="lead-check">✓</span>
+        <span>City quick picks by profile — remote worker, retiree, high earner, lifestyle-first</span>
+      </div>
+      <div class="lead-include-item">
+        <span class="lead-check">✓</span>
+        <span>The three things that go wrong in month one — and how to avoid them</span>
+      </div>
+      <div class="lead-include-item">
+        <span class="lead-check">✓</span>
+        <span>First access to new country guides before public launch</span>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+<!-- ── GUIDES ────────────────────────────────────────────── -->
+<section class="guides" id="guides">
+  <div class="section-header">
+    <div class="section-eyebrow">The Guides</div>
+    <h2 class="section-title">Two countries. Real numbers.<br>No wasted weeks researching.</h2>
+  </div>
+ 
+  <div class="guides-grid">
+ 
+    <!-- Thailand -->
+    <div class="guide-card">
+      <div class="guide-card-top"></div>
+      <div class="guide-card-body">
+        <h3 class="guide-card-title">🇹🇭 The Thailand Relocation Guide</h3>
+        <div class="guide-card-tagline">10 cities · DTV visa · Real costs</div>
+        <p class="guide-card-desc">The most complete English-language guide to relocating in Thailand. 10 cities scored across five categories. The DTV visa explained as decision guidance. Real monthly costs, 30-day move plan, and the 7 mistakes that cost people most.</p>
+        <div class="tier-pills">
+          <span class="tier-pill a">4 Tier A cities</span>
+          <span class="tier-pill b">4 Tier B cities</span>
+          <span class="tier-pill c">2 Tier C cities</span>
+        </div>
+        <div class="guide-checklist">
+          <div class="guide-check"><span class="guide-check-mark">✓</span> 10 cities ranked with full City Index scores</div>
+          <div class="guide-check"><span class="guide-check-mark">✓</span> DTV visa deep dive — who qualifies, real costs, how to apply</div>
+          <div class="guide-check"><span class="guide-check-mark">✓</span> Verified monthly budgets: $800, $1,400, $2,800</div>
+          <div class="guide-check"><span class="guide-check-mark">✓</span> 30-day relocation plan, week by week</div>
+        </div>
+      </div>
+      <div class="guide-card-footer">
+        <div>
+          <div class="guide-price">$19.99</div>
+          <div class="guide-price-sub">Instant download · PDF</div>
+        </div>
+        <a href="https://asiaunlocked.gumroad.com/l/rkvyf" class="guide-buy-btn">Get the Guide →</a>
+      </div>
+    </div>
+ 
+    <!-- Vietnam -->
+    <div class="guide-card">
+      <div class="guide-card-top" style="background: linear-gradient(90deg, #c9a84c, #e8c87a);"></div>
+      <div class="guide-card-body">
+        <h3 class="guide-card-title">🇻🇳 The Vietnam Relocation Guide</h3>
+        <div class="guide-card-tagline">7 cities · Visa reality · Real costs</div>
+        <p class="guide-card-desc">Vietnam has the energy of a country going somewhere — and the cost structure of one that hasn't fully arrived yet. 7 cities scored. The visa landscape explained honestly. Real budgets from HCMC to Da Lat. No tourist fluff.</p>
+        <div class="tier-pills">
+          <span class="tier-pill a">3 Tier A cities</span>
+          <span class="tier-pill b">4 Tier B cities</span>
+        </div>
+        <div class="guide-checklist">
+          <div class="guide-check"><span class="guide-check-mark">✓</span> 7 cities ranked with full City Index scores</div>
+          <div class="guide-check"><span class="guide-check-mark">✓</span> Visa decision guide — 45-day / 90-day / business route</div>
+          <div class="guide-check"><span class="guide-check-mark">✓</span> Verified monthly budgets: $750, $1,100, $1,600</div>
+          <div class="guide-check"><span class="guide-check-mark">✓</span> 30-day relocation plan, week by week</div>
+        </div>
+      </div>
+      <div class="guide-card-footer">
+        <div>
+          <div class="guide-price">$19.99</div>
+          <div class="guide-price-sub">Instant download · PDF</div>
+        </div>
+        <a href="https://asiaunlocked.gumroad.com/l/ozdtc" class="guide-buy-btn">Get the Guide →</a>
+      </div>
+    </div>
+ 
+  </div>
+</section>
+ 
+<!-- ── CITY INDEX ────────────────────────────────────────── -->
+<section class="index-section" id="index">
+  <div class="index-inner">
+    <div class="index-intro">
+      <div class="index-left">
+        <div class="section-eyebrow">The Asia Unlocked City Index™</div>
+        <h2 class="index-title">Not gut feel.<br>Not someone's opinion.<br>Just the numbers.</h2>
+        <p class="index-body">Every city in our guides is scored across five categories on a 1–5 scale. Maximum 25 points. Three tiers. All scores verified and date-stamped. No other relocation brand in Southeast Asia has a methodology like this.</p>
+      </div>
+      <div>
+        <div class="index-categories">
+          <div class="index-cat">
+            <div class="index-cat-num">01</div>
+            <div class="index-cat-name">Expat Infra &amp; Community</div>
+          </div>
+          <div class="index-cat">
+            <div class="index-cat-num">02</div>
+            <div class="index-cat-name">Cost of Living</div>
+          </div>
+          <div class="index-cat">
+            <div class="index-cat-num">03</div>
+            <div class="index-cat-name">English Fluency</div>
+          </div>
+          <div class="index-cat">
+            <div class="index-cat-num">04</div>
+            <div class="index-cat-name">Lifestyle Quality</div>
+          </div>
+          <div class="index-cat">
+            <div class="index-cat-num">05</div>
+            <div class="index-cat-name">Connectivity</div>
+          </div>
+        </div>
+        <div style="margin-top: 16px; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px;">
+          <div style="background: rgba(58,125,92,0.1); border: 1px solid rgba(58,125,92,0.3); border-radius: 3px; padding: 14px; text-align: center;">
+            <div style="font-size: 10px; font-weight: 700; letter-spacing: 1.5px; color: #5bba8c; margin-bottom: 4px; text-transform: uppercase;">Tier A</div>
+            <div style="font-size: 12px; font-weight: 700; color: var(--cream);">Easy Entry</div>
+            <div style="font-size: 11px; color: var(--cream-faint); margin-top: 3px;">18–25 pts</div>
+          </div>
+          <div style="background: rgba(201,168,76,0.08); border: 1px solid rgba(201,168,76,0.25); border-radius: 3px; padding: 14px; text-align: center;">
+            <div style="font-size: 10px; font-weight: 700; letter-spacing: 1.5px; color: var(--gold); margin-bottom: 4px; text-transform: uppercase;">Tier B</div>
+            <div style="font-size: 12px; font-weight: 700; color: var(--cream);">Balanced</div>
+            <div style="font-size: 11px; color: var(--cream-faint); margin-top: 3px;">10–17 pts</div>
+          </div>
+          <div style="background: rgba(139,46,10,0.1); border: 1px solid rgba(139,46,10,0.3); border-radius: 3px; padding: 14px; text-align: center;">
+            <div style="font-size: 10px; font-weight: 700; letter-spacing: 1.5px; color: #c0604d; margin-bottom: 4px; text-transform: uppercase;">Tier C</div>
+            <div style="font-size: 12px; font-weight: 700; color: var(--cream);">Lifestyle First</div>
+            <div style="font-size: 11px; color: var(--cream-faint); margin-top: 3px;">Under 10 pts</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+<!-- ── ABOUT ─────────────────────────────────────────────── -->
+<section class="about" id="about">
   <div class="about-inner">
-    <p class="section-label">Who we are</p>
-    <h2 class="section-title">Not a guidebook. Not an influencer.</h2>
-    <p>
-      Asia Unlocked is built by people who actually live here.
-      <strong>The insider knowledge that doesn't exist in English yet.</strong>
-    </p>
-    <p>
-      We cover the places everyone skips — what an apartment actually costs versus what the blogs say,
-      which visa actually works for long-term stays, where to actually live once you arrive.
-      Real intel for people making real decisions about their lives.
-    </p>
-    <p>
-      Whether you're relocating, working remotely or just done with the same
-      ten destinations everyone recommends — this is for you.
-    </p>
+    <div class="about-eyebrow">Who we are</div>
+    <h2 class="about-title">Not a guidebook.<br>Not an influencer.</h2>
+    <p>Asia Unlocked is built by people who actually live in Southeast Asia. <strong>The insider knowledge that doesn't exist in English yet.</strong></p>
+    <p>We cover what an apartment actually costs versus what the blogs say, which visa actually works in 2026, where to actually live once you arrive. Real intel for people making real decisions about their lives.</p>
+    <p>Whether you're relocating, working remotely, or just done with the same ten destinations everyone recommends — this is for you.</p>
+    <div class="about-rule"></div>
+    <p style="font-size: 14px; color: #888;">Philippines and Sri Lanka guides coming in 2026. Get on the list to be first.</p>
   </div>
 </section>
-
-<!-- ── FOOTER ────────────────────────────────────────── -->
+ 
+<!-- ── FOOTER ────────────────────────────────────────────── -->
 <footer>
-  <div class="logo-text">Asia Unlocked</div>
-  <p>
-    <a href="mailto:hello@asiaunlocked.guide">hello@asiaunlocked.guide</a>
-    &nbsp;·&nbsp; asiaunlocked.guide
-    &nbsp;·&nbsp; © 2026
-  </p>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="footer-logo">Asia Unlocked</div>
+      <p>Real relocation intelligence for Southeast Asia. Built by people who actually live there.</p>
+    </div>
+    <div>
+      <div class="footer-col-title">Guides</div>
+      <div class="footer-links">
+        <a href="https://asiaunlocked.gumroad.com/l/rkvyf">Thailand Relocation Guide — $19.99</a>
+        <a href="https://asiaunlocked.gumroad.com/l/ozdtc">Vietnam Relocation Guide — $19.99</a>
+        <a href="#lead">Free: SEA Cheat Sheet</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title">Contact</div>
+      <div class="footer-links">
+        <a href="mailto:hello@asiaunlocked.guide">hello@asiaunlocked.guide</a>
+        <a href="https://instagram.com/asiaunlocked01">Instagram</a>
+        <a href="#">asiaunlocked.guide</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Asia Unlocked · <a href="#">asiaunlocked.guide</a></p>
+    <p>Verified April 2026 · Guides update annually</p>
+  </div>
 </footer>
-
+ 
 </body>
 </html>
+ 
+
+
+
+
+
