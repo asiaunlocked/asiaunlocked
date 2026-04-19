@@ -15,7 +15,7 @@
   <meta property="og:description" content="Real numbers. Insider voice. No fluff. Thailand and Vietnam guides now live."/>
   <meta property="og:site_name" content="Asia Unlocked"/>
   <meta name="twitter:card" content="summary_large_image"/>
- 
+
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-YQE1LZWRW7"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -23,11 +23,11 @@
     gtag('js', new Date());
     gtag('config', 'G-YQE1LZWRW7');
   </script>
- 
+
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet"/>
- 
+
   <style>
     :root {
       --gold:       #c9a84c;
@@ -45,17 +45,17 @@
       --text:       #2a2a2a;
       --radius:     3px;
     }
- 
+
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
- 
+
     body {
       font-family: 'Lato', sans-serif;
       background: var(--dark);
       color: var(--cream);
       overflow-x: hidden;
     }
- 
+
     /* ── NOISE OVERLAY ─────────────────────────────────── */
     body::before {
       content: '';
@@ -66,7 +66,7 @@
       z-index: 0;
       opacity: 0.4;
     }
- 
+
     /* ── NAV ───────────────────────────────────────────── */
     nav {
       position: sticky;
@@ -81,7 +81,7 @@
       -webkit-backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--gold-dim);
     }
- 
+
     .nav-logo {
       font-family: 'Playfair Display', serif;
       font-size: 17px;
@@ -91,13 +91,13 @@
       text-transform: uppercase;
       text-decoration: none;
     }
- 
+
     .nav-right {
       display: flex;
       align-items: center;
       gap: 28px;
     }
- 
+
     .nav-link {
       font-size: 11px;
       font-weight: 700;
@@ -108,7 +108,7 @@
       transition: color 0.2s;
     }
     .nav-link:hover { color: var(--gold); }
- 
+
     .nav-cta {
       font-size: 11px;
       font-weight: 700;
@@ -122,7 +122,7 @@
       transition: background 0.2s, transform 0.2s;
     }
     .nav-cta:hover { background: var(--gold-light); transform: translateY(-1px); }
- 
+
     /* ── HERO ──────────────────────────────────────────── */
     .hero {
       position: relative;
@@ -133,7 +133,7 @@
       padding: 80px 24px;
       overflow: hidden;
     }
- 
+
     .hero-bg {
       position: absolute;
       inset: 0;
@@ -142,7 +142,7 @@
         radial-gradient(ellipse 50% 40% at 80% 80%, rgba(26,58,92,0.4) 0%, transparent 60%),
         linear-gradient(170deg, #070e18 0%, #0d1b2a 50%, #070e18 100%);
     }
- 
+
     /* Decorative grid lines */
     .hero-bg::after {
       content: '';
@@ -154,7 +154,7 @@
       background-size: 60px 60px;
       mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 30%, transparent 80%);
     }
- 
+
     .hero-inner {
       position: relative;
       z-index: 1;
@@ -162,7 +162,7 @@
       width: 100%;
       text-align: center;
     }
- 
+
     .hero-eyebrow {
       display: inline-flex;
       align-items: center;
@@ -176,7 +176,7 @@
       opacity: 0;
       animation: fadeUp 0.7s 0.1s ease forwards;
     }
- 
+
     .hero-eyebrow::before,
     .hero-eyebrow::after {
       content: '';
@@ -186,7 +186,7 @@
       background: var(--gold);
       opacity: 0.5;
     }
- 
+
     .hero-headline {
       font-family: 'Playfair Display', serif;
       font-size: clamp(3rem, 7vw, 5.2rem);
@@ -197,12 +197,12 @@
       opacity: 0;
       animation: fadeUp 0.7s 0.25s ease forwards;
     }
- 
+
     .hero-headline em {
       font-style: italic;
       color: var(--gold);
     }
- 
+
     .hero-sub {
       font-size: 18px;
       font-weight: 300;
@@ -213,7 +213,7 @@
       opacity: 0;
       animation: fadeUp 0.7s 0.4s ease forwards;
     }
- 
+
     .hero-ctas {
       display: flex;
       align-items: center;
@@ -223,7 +223,7 @@
       opacity: 0;
       animation: fadeUp 0.7s 0.55s ease forwards;
     }
- 
+
     .btn-primary {
       display: inline-flex;
       align-items: center;
@@ -243,7 +243,7 @@
       transform: translateY(-2px);
       box-shadow: 0 12px 40px rgba(201,168,76,0.25);
     }
- 
+
     .btn-secondary {
       display: inline-flex;
       align-items: center;
@@ -264,7 +264,7 @@
       color: var(--gold);
       transform: translateY(-2px);
     }
- 
+
     .hero-proof {
       margin-top: 52px;
       display: flex;
@@ -275,14 +275,14 @@
       opacity: 0;
       animation: fadeUp 0.7s 0.7s ease forwards;
     }
- 
+
     .proof-item {
       display: flex;
       flex-direction: column;
       align-items: center;
       gap: 4px;
     }
- 
+
     .proof-num {
       font-family: 'Playfair Display', serif;
       font-size: 28px;
@@ -290,7 +290,7 @@
       color: var(--gold);
       line-height: 1;
     }
- 
+
     .proof-label {
       font-size: 10px;
       font-weight: 700;
@@ -298,13 +298,13 @@
       text-transform: uppercase;
       color: var(--cream-faint);
     }
- 
+
     .proof-divider {
       width: 1px;
       height: 36px;
       background: var(--gold-dim);
     }
- 
+
     /* ── LEAD MAGNET BAND ──────────────────────────────── */
     .lead-band {
       background: linear-gradient(135deg, #0d1b2a 0%, #112236 100%);
@@ -312,7 +312,7 @@
       border-bottom: 1px solid var(--gold-dim);
       padding: 56px 24px;
     }
- 
+
     .lead-band-inner {
       max-width: 860px;
       margin: 0 auto;
@@ -321,7 +321,7 @@
       gap: 48px;
       align-items: center;
     }
- 
+
     .lead-tag {
       display: inline-block;
       font-size: 9px;
@@ -335,7 +335,7 @@
       border-radius: 2px;
       margin-bottom: 16px;
     }
- 
+
     .lead-title {
       font-family: 'Playfair Display', serif;
       font-size: 1.8rem;
@@ -344,7 +344,7 @@
       line-height: 1.2;
       margin-bottom: 12px;
     }
- 
+
     .lead-body {
       font-size: 15px;
       font-weight: 300;
@@ -352,12 +352,12 @@
       line-height: 1.7;
       margin-bottom: 24px;
     }
- 
+
     .lead-form {
       display: flex;
       gap: 8px;
     }
- 
+
     .lead-input {
       flex: 1;
       background: rgba(255,255,255,0.05);
@@ -372,7 +372,7 @@
     }
     .lead-input::placeholder { color: rgba(245,239,224,0.3); }
     .lead-input:focus { border-color: var(--gold); }
- 
+
     .lead-submit {
       background: var(--green);
       color: white;
@@ -391,20 +391,20 @@
       background: #4a9e72;
       transform: translateY(-1px);
     }
- 
+
     .lead-small {
       font-size: 11px;
       color: rgba(245,239,224,0.25);
       margin-top: 10px;
       letter-spacing: 0.3px;
     }
- 
+
     .lead-includes {
       display: flex;
       flex-direction: column;
       gap: 12px;
     }
- 
+
     .lead-include-item {
       display: flex;
       align-items: flex-start;
@@ -413,7 +413,7 @@
       color: var(--cream-dim);
       line-height: 1.5;
     }
- 
+
     .lead-check {
       color: var(--green);
       font-weight: 700;
@@ -421,13 +421,13 @@
       flex-shrink: 0;
       margin-top: 1px;
     }
- 
+
     /* ── GUIDES SECTION ────────────────────────────────── */
     .guides {
       padding: 96px 24px;
       position: relative;
     }
- 
+
     .guides::before {
       content: '';
       position: absolute;
@@ -435,12 +435,12 @@
       height: 1px;
       background: linear-gradient(90deg, transparent, var(--gold), transparent);
     }
- 
+
     .section-header {
       text-align: center;
       margin-bottom: 56px;
     }
- 
+
     .section-eyebrow {
       font-size: 10px;
       font-weight: 700;
@@ -449,7 +449,7 @@
       color: var(--red);
       margin-bottom: 12px;
     }
- 
+
     .section-title {
       font-family: 'Playfair Display', serif;
       font-size: clamp(1.8rem, 3.5vw, 2.8rem);
@@ -457,7 +457,7 @@
       color: var(--cream);
       line-height: 1.2;
     }
- 
+
     .guides-grid {
       max-width: 920px;
       margin: 0 auto;
@@ -465,7 +465,7 @@
       grid-template-columns: 1fr 1fr;
       gap: 24px;
     }
- 
+
     .guide-card {
       background: var(--dark-card);
       border: 1px solid var(--dark-border);
@@ -475,25 +475,25 @@
       display: flex;
       flex-direction: column;
     }
- 
+
     .guide-card:hover {
       transform: translateY(-4px);
       border-color: rgba(201,168,76,0.4);
       box-shadow: 0 20px 60px rgba(0,0,0,0.4);
     }
- 
+
     .guide-card-top {
       height: 4px;
       background: var(--gold);
     }
- 
+
     .guide-card-body {
       padding: 32px;
       flex: 1;
       display: flex;
       flex-direction: column;
     }
- 
+
     .guide-flag {
       display: inline-flex;
       align-items: center;
@@ -505,7 +505,7 @@
       color: var(--gold);
       margin-bottom: 16px;
     }
- 
+
     .guide-flag::before {
       content: '';
       display: block;
@@ -513,7 +513,7 @@
       height: 1px;
       background: var(--gold);
     }
- 
+
     .guide-card-title {
       font-family: 'Playfair Display', serif;
       font-size: 1.5rem;
@@ -522,7 +522,7 @@
       line-height: 1.2;
       margin-bottom: 8px;
     }
- 
+
     .guide-card-tagline {
       font-size: 13px;
       color: rgba(245,239,224,0.4);
@@ -531,7 +531,7 @@
       margin-bottom: 20px;
       font-weight: 700;
     }
- 
+
     .guide-card-desc {
       font-size: 14px;
       font-weight: 300;
@@ -540,14 +540,14 @@
       margin-bottom: 24px;
       flex: 1;
     }
- 
+
     .guide-checklist {
       margin-bottom: 28px;
       display: flex;
       flex-direction: column;
       gap: 8px;
     }
- 
+
     .guide-check {
       display: flex;
       align-items: flex-start;
@@ -556,13 +556,13 @@
       color: rgba(245,239,224,0.7);
       line-height: 1.5;
     }
- 
+
     .guide-check-mark {
       color: var(--gold);
       font-weight: 700;
       flex-shrink: 0;
     }
- 
+
     .guide-card-footer {
       display: flex;
       align-items: center;
@@ -571,20 +571,20 @@
       border-top: 1px solid var(--dark-border);
       background: rgba(0,0,0,0.15);
     }
- 
+
     .guide-price {
       font-family: 'Playfair Display', serif;
       font-size: 1.4rem;
       font-weight: 700;
       color: var(--cream);
     }
- 
+
     .guide-price-sub {
       font-size: 11px;
       color: rgba(245,239,224,0.3);
       margin-top: 2px;
     }
- 
+
     .guide-buy-btn {
       display: inline-block;
       background: var(--gold);
@@ -601,7 +601,7 @@
       background: var(--gold-light);
       transform: translateY(-1px);
     }
- 
+
     /* City tier pills in card */
     .tier-pills {
       display: flex;
@@ -609,7 +609,7 @@
       margin-bottom: 20px;
       flex-wrap: wrap;
     }
- 
+
     .tier-pill {
       font-size: 10px;
       font-weight: 700;
@@ -620,11 +620,11 @@
       border: 1px solid var(--dark-border);
       color: var(--cream-dim);
     }
- 
+
     .tier-pill.a { border-color: rgba(58,125,92,0.5); color: #5bba8c; }
     .tier-pill.b { border-color: rgba(201,168,76,0.4); color: var(--gold); }
     .tier-pill.c { border-color: rgba(139,46,10,0.4); color: #c0604d; }
- 
+
     /* ── INDEX SECTION ─────────────────────────────────── */
     .index-section {
       padding: 80px 24px;
@@ -632,12 +632,12 @@
       border-top: 1px solid var(--gold-dim);
       border-bottom: 1px solid var(--gold-dim);
     }
- 
+
     .index-inner {
       max-width: 860px;
       margin: 0 auto;
     }
- 
+
     .index-intro {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -645,9 +645,9 @@
       align-items: center;
       margin-bottom: 48px;
     }
- 
+
     .index-left .section-eyebrow { text-align: left; }
- 
+
     .index-title {
       font-family: 'Playfair Display', serif;
       font-size: clamp(1.6rem, 3vw, 2.4rem);
@@ -656,20 +656,20 @@
       line-height: 1.2;
       margin-bottom: 16px;
     }
- 
+
     .index-body {
       font-size: 15px;
       font-weight: 300;
       color: var(--cream-dim);
       line-height: 1.7;
     }
- 
+
     .index-categories {
       display: grid;
       grid-template-columns: repeat(5, 1fr);
       gap: 12px;
     }
- 
+
     .index-cat {
       background: var(--dark-card);
       border: 1px solid var(--dark-border);
@@ -679,7 +679,7 @@
       transition: border-color 0.2s;
     }
     .index-cat:hover { border-color: rgba(201,168,76,0.3); }
- 
+
     .index-cat-num {
       font-family: 'Playfair Display', serif;
       font-size: 1.6rem;
@@ -688,7 +688,7 @@
       margin-bottom: 6px;
       line-height: 1;
     }
- 
+
     .index-cat-name {
       font-size: 10px;
       font-weight: 700;
@@ -697,19 +697,19 @@
       color: var(--cream-faint);
       line-height: 1.4;
     }
- 
+
     /* ── ABOUT ─────────────────────────────────────────── */
     .about {
       padding: 96px 24px;
       background: var(--cream);
     }
- 
+
     .about-inner {
       max-width: 680px;
       margin: 0 auto;
       text-align: center;
     }
- 
+
     .about-eyebrow {
       font-size: 10px;
       font-weight: 700;
@@ -718,7 +718,7 @@
       color: var(--red);
       margin-bottom: 14px;
     }
- 
+
     .about-title {
       font-family: 'Playfair Display', serif;
       font-size: clamp(1.8rem, 3.5vw, 2.8rem);
@@ -727,7 +727,7 @@
       line-height: 1.2;
       margin-bottom: 28px;
     }
- 
+
     .about p {
       font-size: 17px;
       font-weight: 300;
@@ -735,23 +735,23 @@
       color: #555;
       margin-bottom: 18px;
     }
- 
+
     .about p strong { color: var(--red); font-weight: 700; }
- 
+
     .about-rule {
       width: 60px;
       height: 2px;
       background: var(--gold);
       margin: 32px auto;
     }
- 
+
     /* ── FOOTER ────────────────────────────────────────── */
     footer {
       background: #040a10;
       padding: 52px 24px 40px;
       border-top: 1px solid var(--gold-dim);
     }
- 
+
     .footer-inner {
       max-width: 860px;
       margin: 0 auto;
@@ -760,7 +760,7 @@
       gap: 32px;
       margin-bottom: 40px;
     }
- 
+
     .footer-brand .footer-logo {
       font-family: 'Playfair Display', serif;
       font-size: 16px;
@@ -770,14 +770,14 @@
       text-transform: uppercase;
       margin-bottom: 12px;
     }
- 
+
     .footer-brand p {
       font-size: 13px;
       font-weight: 300;
       color: rgba(245,239,224,0.3);
       line-height: 1.7;
     }
- 
+
     .footer-col-title {
       font-size: 10px;
       font-weight: 700;
@@ -786,13 +786,13 @@
       color: var(--gold);
       margin-bottom: 16px;
     }
- 
+
     .footer-links {
       display: flex;
       flex-direction: column;
       gap: 8px;
     }
- 
+
     .footer-links a {
       font-size: 13px;
       font-weight: 300;
@@ -801,7 +801,7 @@
       transition: color 0.2s;
     }
     .footer-links a:hover { color: var(--gold); }
- 
+
     .footer-bottom {
       max-width: 860px;
       margin: 0 auto;
@@ -813,25 +813,25 @@
       flex-wrap: wrap;
       gap: 12px;
     }
- 
+
     .footer-bottom p {
       font-size: 11px;
       color: rgba(245,239,224,0.2);
       letter-spacing: 1px;
     }
- 
+
     .footer-bottom a {
       color: rgba(201,168,76,0.4);
       text-decoration: none;
     }
     .footer-bottom a:hover { color: var(--gold); }
- 
+
     /* ── ANIMATIONS ────────────────────────────────────── */
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(20px); }
       to   { opacity: 1; transform: translateY(0); }
     }
- 
+
     /* ── RESPONSIVE ────────────────────────────────────── */
     @media (max-width: 768px) {
       nav { padding: 16px 20px; }
@@ -849,7 +849,7 @@
   </style>
 </head>
 <body>
- 
+
 <!-- ── NAV ──────────────────────────────────────────────── -->
 <nav>
   <a href="/" class="nav-logo">Asia Unlocked</a>
@@ -860,7 +860,7 @@
     <a href="#guides" class="nav-cta">Get a Guide</a>
   </div>
 </nav>
- 
+
 <!-- ── HERO ─────────────────────────────────────────────── -->
 <section class="hero">
   <div class="hero-bg"></div>
@@ -869,11 +869,11 @@
       Real intel.<br>Real numbers.<br><em>Southeast Asia.</em>
     </h1>
     <p class="hero-sub">
-      Real relocation guides for Southeast Asia. Built by people who actually live there, for people making real decisions about where to go next.
+      Most people spend weeks researching this. You'll know in an hour.
     </p>
     <div class="hero-ctas">
-      <a href="#lead" class="btn-secondary">↓ Free: SEA Relocation Cheat Sheet</a>
-      <a href="#guides" class="btn-primary">Browse the Guides →</a>
+      <a href="https://asiaunlocked.gumroad.com/l/rkvyf" class="btn-primary">Get the Thailand Guide — $19.99 →</a>
+      <a href="#lead" class="btn-secondary">↓ Free: SEA Cheat Sheet</a>
     </div>
     <div class="hero-proof">
       <div class="proof-item">
@@ -898,14 +898,81 @@
     </div>
   </div>
 </section>
- 
+
+<!-- ── GUIDES ────────────────────────────────────────────── -->
+<section class="guides" id="guides">
+  <div class="section-header">
+    <div class="section-eyebrow">The Guides</div>
+    <h2 class="section-title">Start with Thailand or Vietnam.<br>Both live now.</h2>
+  </div>
+
+  <div class="guides-grid">
+
+    <!-- Thailand -->
+    <div class="guide-card">
+      <div class="guide-card-top"></div>
+      <div class="guide-card-body">
+        <h3 class="guide-card-title">🇹🇭 The Thailand Relocation Guide</h3>
+        <div class="guide-card-tagline">10 cities · DTV visa · Real costs</div>
+        <p class="guide-card-desc">The most complete English-language guide to relocating in Thailand. 10 cities scored across five categories. The DTV visa explained as decision guidance. Real monthly costs, 30-day move plan, and the 7 mistakes that cost people most.</p>
+        <div class="tier-pills">
+          <span class="tier-pill a">4 Tier A cities</span>
+          <span class="tier-pill b">4 Tier B cities</span>
+          <span class="tier-pill c">2 Tier C cities</span>
+        </div>
+        <div class="guide-checklist">
+          <div class="guide-check"><span class="guide-check-mark">✓</span> 10 cities ranked with full City Index scores</div>
+          <div class="guide-check"><span class="guide-check-mark">✓</span> DTV visa deep dive — who qualifies, real costs, how to apply</div>
+          <div class="guide-check"><span class="guide-check-mark">✓</span> Verified monthly budgets: $800, $1,400, $2,800</div>
+          <div class="guide-check"><span class="guide-check-mark">✓</span> 30-day relocation plan, week by week</div>
+        </div>
+      </div>
+      <div class="guide-card-footer">
+        <div>
+          <div class="guide-price">$19.99</div>
+          <div class="guide-price-sub">Instant download · PDF</div>
+        </div>
+        <a href="https://asiaunlocked.gumroad.com/l/rkvyf" class="guide-buy-btn">Get the Guide →</a>
+      </div>
+    </div>
+
+    <!-- Vietnam -->
+    <div class="guide-card">
+      <div class="guide-card-top" style="background: linear-gradient(90deg, #c9a84c, #e8c87a);"></div>
+      <div class="guide-card-body">
+        <h3 class="guide-card-title">🇻🇳 The Vietnam Relocation Guide</h3>
+        <div class="guide-card-tagline">7 cities · Visa reality · Real costs</div>
+        <p class="guide-card-desc">Vietnam has the energy of a country going somewhere — and the cost structure of one that hasn't fully arrived yet. 7 cities scored. The visa landscape explained honestly. Real budgets from HCMC to Da Lat. No tourist fluff.</p>
+        <div class="tier-pills">
+          <span class="tier-pill a">3 Tier A cities</span>
+          <span class="tier-pill b">4 Tier B cities</span>
+        </div>
+        <div class="guide-checklist">
+          <div class="guide-check"><span class="guide-check-mark">✓</span> 7 cities ranked with full City Index scores</div>
+          <div class="guide-check"><span class="guide-check-mark">✓</span> Visa decision guide — 45-day / 90-day / business route</div>
+          <div class="guide-check"><span class="guide-check-mark">✓</span> Verified monthly budgets: $750, $1,100, $1,600</div>
+          <div class="guide-check"><span class="guide-check-mark">✓</span> 30-day relocation plan, week by week</div>
+        </div>
+      </div>
+      <div class="guide-card-footer">
+        <div>
+          <div class="guide-price">$19.99</div>
+          <div class="guide-price-sub">Instant download · PDF</div>
+        </div>
+        <a href="https://asiaunlocked.gumroad.com/l/ozdtc" class="guide-buy-btn">Get the Guide →</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
 <!-- ── LEAD MAGNET ───────────────────────────────────────── -->
 <section class="lead-band" id="lead">
   <div class="lead-band-inner">
     <div>
       <div class="lead-tag">Free download</div>
-      <h2 class="lead-title">The SEA Relocation<br>Cheat Sheet</h2>
-      <p class="lead-body">The five things that matter most — visa pathways, real cost benchmarks, city quick picks — distilled into one page. Free, instant, no fluff.</p>
+      <h2 class="lead-title">Where should you live in<br>Southeast Asia?<br><span style="color:var(--gold);">Free 1-page answer.</span></h2>
+      <p class="lead-body">Used by early readers before they commit to a move. Visa pathways, real cost benchmarks, city quick picks — distilled into one page.</p>
       <div class="lead-form">
         <input type="email" class="lead-input" placeholder="your@email.com"/>
         <button class="lead-submit">Send it →</button>
@@ -936,74 +1003,7 @@
     </div>
   </div>
 </section>
- 
-<!-- ── GUIDES ────────────────────────────────────────────── -->
-<section class="guides" id="guides">
-  <div class="section-header">
-    <div class="section-eyebrow">The Guides</div>
-    <h2 class="section-title">Two countries. Real numbers.<br>No wasted weeks researching.</h2>
-  </div>
- 
-  <div class="guides-grid">
- 
-    <!-- Thailand -->
-    <div class="guide-card">
-      <div class="guide-card-top"></div>
-      <div class="guide-card-body">
-        <h3 class="guide-card-title">🇹🇭 The Thailand Relocation Guide</h3>
-        <div class="guide-card-tagline">10 cities · DTV visa · Real costs</div>
-        <p class="guide-card-desc">The most complete English-language guide to relocating in Thailand. 10 cities scored across five categories. The DTV visa explained as decision guidance. Real monthly costs, 30-day move plan, and the 7 mistakes that cost people most.</p>
-        <div class="tier-pills">
-          <span class="tier-pill a">4 Tier A cities</span>
-          <span class="tier-pill b">4 Tier B cities</span>
-          <span class="tier-pill c">2 Tier C cities</span>
-        </div>
-        <div class="guide-checklist">
-          <div class="guide-check"><span class="guide-check-mark">✓</span> 10 cities ranked with full City Index scores</div>
-          <div class="guide-check"><span class="guide-check-mark">✓</span> DTV visa deep dive — who qualifies, real costs, how to apply</div>
-          <div class="guide-check"><span class="guide-check-mark">✓</span> Verified monthly budgets: $800, $1,400, $2,800</div>
-          <div class="guide-check"><span class="guide-check-mark">✓</span> 30-day relocation plan, week by week</div>
-        </div>
-      </div>
-      <div class="guide-card-footer">
-        <div>
-          <div class="guide-price">$19.99</div>
-          <div class="guide-price-sub">Instant download · PDF</div>
-        </div>
-        <a href="https://asiaunlocked.gumroad.com/l/rkvyf" class="guide-buy-btn">Get the Guide →</a>
-      </div>
-    </div>
- 
-    <!-- Vietnam -->
-    <div class="guide-card">
-      <div class="guide-card-top" style="background: linear-gradient(90deg, #c9a84c, #e8c87a);"></div>
-      <div class="guide-card-body">
-        <h3 class="guide-card-title">🇻🇳 The Vietnam Relocation Guide</h3>
-        <div class="guide-card-tagline">7 cities · Visa reality · Real costs</div>
-        <p class="guide-card-desc">Vietnam has the energy of a country going somewhere — and the cost structure of one that hasn't fully arrived yet. 7 cities scored. The visa landscape explained honestly. Real budgets from HCMC to Da Lat. No tourist fluff.</p>
-        <div class="tier-pills">
-          <span class="tier-pill a">3 Tier A cities</span>
-          <span class="tier-pill b">4 Tier B cities</span>
-        </div>
-        <div class="guide-checklist">
-          <div class="guide-check"><span class="guide-check-mark">✓</span> 7 cities ranked with full City Index scores</div>
-          <div class="guide-check"><span class="guide-check-mark">✓</span> Visa decision guide — 45-day / 90-day / business route</div>
-          <div class="guide-check"><span class="guide-check-mark">✓</span> Verified monthly budgets: $750, $1,100, $1,600</div>
-          <div class="guide-check"><span class="guide-check-mark">✓</span> 30-day relocation plan, week by week</div>
-        </div>
-      </div>
-      <div class="guide-card-footer">
-        <div>
-          <div class="guide-price">$19.99</div>
-          <div class="guide-price-sub">Instant download · PDF</div>
-        </div>
-        <a href="https://asiaunlocked.gumroad.com/l/ozdtc" class="guide-buy-btn">Get the Guide →</a>
-      </div>
-    </div>
- 
-  </div>
-</section>
- 
+
 <!-- ── CITY INDEX ────────────────────────────────────────── -->
 <section class="index-section" id="index">
   <div class="index-inner">
@@ -1057,20 +1057,19 @@
     </div>
   </div>
 </section>
- 
+
 <!-- ── ABOUT ─────────────────────────────────────────────── -->
 <section class="about" id="about">
   <div class="about-inner">
     <div class="about-eyebrow">Who we are</div>
-    <h2 class="about-title">Not a guidebook.<br>Not an influencer.</h2>
-    <p>Asia Unlocked is built by people who actually live in Southeast Asia. <strong>The insider knowledge that doesn't exist in English yet.</strong></p>
-    <p>We cover what an apartment actually costs versus what the blogs say, which visa actually works in 2026, where to actually live once you arrive. Real intel for people making real decisions about their lives.</p>
-    <p>Whether you're relocating, working remotely, or just done with the same ten destinations everyone recommends — this is for you.</p>
+    <h2 class="about-title">Not a blog.<br>Not a YouTube opinion.<br>A decision system.</h2>
+    <p>Built by people who actually live in Southeast Asia. Real costs, real visa reality, real neighbourhoods — verified on the ground, not aggregated from forums.</p>
+    <p>We write for people making <strong>actual decisions</strong> about their lives. Where to live. What it costs. How to move.</p>
     <div class="about-rule"></div>
     <p style="font-size: 14px; color: #888;">Philippines and Sri Lanka guides coming in 2026. Get on the list to be first.</p>
   </div>
 </section>
- 
+
 <!-- ── FOOTER ────────────────────────────────────────────── -->
 <footer>
   <div class="footer-inner">
@@ -1100,12 +1099,6 @@
     <p>Verified April 2026 · Guides update annually</p>
   </div>
 </footer>
- 
+
 </body>
 </html>
- 
-
-
-
-
-
